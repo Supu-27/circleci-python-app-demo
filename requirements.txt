@@ -1,2 +1,4 @@
-echo "flask" > requirements.txt
+
+flask
+requests
 

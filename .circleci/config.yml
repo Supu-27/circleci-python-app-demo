@@ -17,7 +17,7 @@ jobs:
   test:
     docker:
       - image: circleci/python:3.9
-    working_directory: ~/repo
+    working_directory: ~/https://github.com/Supu-27/circleci-python-app-demo.git
     steps:
       - attach_workspace:
           at: .
@@ -25,13 +25,13 @@ jobs:
   deploy:
     docker:
       - image: circleci/python:3.9
-    working_directory: ~/repo
+    working_directory: ~/https://github.com/Supu-27/circleci-python-app-demo.git
     steps:
       - attach_workspace:
           at: .
       - run:
           name: Deploy to production
           command: |
-            ssh ubuntu@54.234.53.137 "mkdir -p /opt/my-python-app"
-            rsync -azP . ubuntu@54.234.53.137:/opt/my-python-app/
+            ssh ubuntu@54.234.53.137 "mkdir -p /opt/circleci-python-app-demo"
+            rsync -azP . ubuntu@54.234.53.137:/opt/circleci-python-app-demo/
 
