@@ -32,6 +32,6 @@ jobs:
       - run:
           name: Deploy to production
           command: |
-            ssh user@server "mkdir -p /opt/my-python-app"
-            rsync -azP . user@server:/opt/my-python-app/
+            ssh ubuntu@54.234.53.137 "mkdir -p /opt/my-python-app"
+            rsync -azP . ubuntu@54.234.53.137:/opt/my-python-app/
 
